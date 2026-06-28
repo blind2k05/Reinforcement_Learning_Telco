@@ -1,8 +1,15 @@
-# 📊 Telco Customer Churn: Reinforcement Learning Retention
+## 📊 Dataset & Data Preparation
 
 Proyek ini mendemonstrasikan bagaimana Kecerdasan Buatan (AI) berbasis **Reinforcement Learning** dapat digunakan untuk mengoptimalkan strategi retensi pelanggan di industri Telekomunikasi. 
-
+Proyek ini menggunakan dataset churn pelanggan telekomunikasi. Data tersebut diproses melalui *pipeline* berikut untuk memastikan AI belajar dari data yang bersih dan relevan:
 Daripada menebak-nebak atau menyebarkan promo secara acak (yang membuang anggaran), AI ini belajar secara mandiri untuk mengalokasikan promo yang tepat (Diskon, Kuota, atau Panggilan CS) hanya kepada pelanggan yang benar-benar berisiko *churn*.
+
+* **`Telco_Customer_Churn.csv`**: Dataset mentah (*raw data*) yang berisi informasi demografi, layanan, dan status churn pelanggan.
+* **`clean_telco_data.csv`**: Hasil pembersihan data (menangani *missing values*, normalisasi fitur, dan *encoding* variabel kategorikal).
+* **`train_telco.csv`**: Dataset yang digunakan khusus untuk melatih agen Reinforcement Learning.
+* **`test_telco.csv`**: Dataset khusus untuk evaluasi performa model dan *stress testing* di lingkungan yang tidak terlihat (*unseen data*).
+
+*Semua proses pembersihan data di atas didokumentasikan di dalam notebook `data_prep.ipynb`.*
 
 ## 📂 Struktur Proyek
 * `telco_env.py`: Mesin simulator (Environment) tempat AI berlatih.
